@@ -20,8 +20,6 @@ const wallpapperDirList = fs.readdirSync(wallpapperDir).filter(dir => {
     } catch(e) {
         return false
     }
-}).filter(dir => dir==='2535678031').map(dir => {
-    return path.resolve(wallpapperDir, dir)
 })
 
 outputFile(wallpapperDirList)
@@ -46,4 +44,3 @@ async function outputFile(dirList) {
         }
     }
 }
-
